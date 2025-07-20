@@ -1,0 +1,710 @@
+warning: unused import: `VectorMetadata`
+ --> /home/hue/source/MEM8/m8c/src/memory/mem8.rs:5:35
+  |
+5 | use crate::storage::{VectorStore, VectorMetadata};
+  |                                   ^^^^^^^^^^^^^^
+  |
+  = note: `#[warn(unused_imports)]` on by default
+
+warning: unused import: `std::collections::HashMap`
+ --> /home/hue/source/MEM8/m8c/src/memory/context_builder.rs:3:5
+  |
+3 | use std::collections::HashMap;
+  |     ^^^^^^^^^^^^^^^^^^^^^^^^^
+
+warning: unused import: `Result`
+ --> /home/hue/source/MEM8/m8c/src/memory/smart_context.rs:1:19
+  |
+1 | use crate::core::{Result, WavePattern};
+  |                   ^^^^^^
+
+warning: unused imports: `Mem8Error` and `Result as Mem8Result`
+  --> /home/hue/source/MEM8/m8c/src/sensor_pipeline/mod.rs:14:19
+   |
+14 | use crate::core::{Result as Mem8Result, Mem8Error};
+   |                   ^^^^^^^^^^^^^^^^^^^^  ^^^^^^^^^
+
+warning: unused import: `WavePattern`
+ --> /home/hue/source/MEM8/m8c/src/temporal/context.rs:1:27
+  |
+1 | use crate::core::{Result, WavePattern, EmotionalContext};
+  |                           ^^^^^^^^^^^
+
+warning: unused import: `tokio::sync::mpsc`
+ --> /home/hue/source/MEM8/m8c/src/temporal/fusion.rs:8:5
+  |
+8 | use tokio::sync::mpsc;
+  |     ^^^^^^^^^^^^^^^^^
+
+warning: unused variable: `wave`
+   --> /home/hue/source/MEM8/m8c/src/sensor_pipeline/mod.rs:369:37
+    |
+369 | ...                   for wave in &processed.wave_patterns {
+    |                           ^^^^ help: if this is intentional, prefix it with an underscore: `_wave`
+    |
+    = note: `#[warn(unused_variables)]` on by default
+
+warning: unused variable: `stream`
+   --> /home/hue/source/MEM8/m8c/src/temporal/fusion.rs:209:21
+    |
+209 |         if let Some(stream) = self.sensor_streams.read().get(sensor_id) {
+    |                     ^^^^^^ help: if this is intentional, prefix it with an underscore: `_stream`
+
+warning: unused variable: `stats`
+   --> /home/hue/source/MEM8/m8c/src/temporal/fusion.rs:223:17
+    |
+223 |             let stats = self.stats.read();
+    |                 ^^^^^ help: if this is intentional, prefix it with an underscore: `_stats`
+
+warning: unused variable: `correlated`
+   --> /home/hue/source/MEM8/m8c/src/temporal/fusion.rs:238:17
+    |
+238 |             let correlated = self.find_correlated_sensors(sensor_id);
+    |                 ^^^^^^^^^^ help: if this is intentional, prefix it with an underscore: `_correlated`
+
+warning: unused variable: `conversation_memories`
+   --> /home/hue/source/MEM8/m8c/src/memory/associative.rs:197:9
+    |
+197 |     let conversation_memories = vec![1007, 1008]; // Deep conversations
+    |         ^^^^^^^^^^^^^^^^^^^^^ help: if this is intentional, prefix it with an underscore: `_conversation_memories`
+
+warning: unused variable: `universal_grid_read_guard`
+   --> /home/hue/source/MEM8/m8c/src/memory/mem8.rs:257:13
+    |
+257 |         let universal_grid_read_guard = self.universal_grid.read().unwrap();
+    |             ^^^^^^^^^^^^^^^^^^^^^^^^^ help: if this is intentional, prefix it with an underscore: `_universal_grid_read_guard`
+
+warning: unused variable: `grid`
+   --> /home/hue/source/MEM8/m8c/src/memory/mem8.rs:265:29
+    |
+265 |         for (_sensory_type, grid) in &self.grids {
+    |                             ^^^^ help: if this is intentional, prefix it with an underscore: `_grid`
+
+warning: unused variable: `age`
+   --> /home/hue/source/MEM8/m8c/src/memory/mem8.rs:325:14
+    |
+325 |         let (age, importance, decay_factor) = {
+    |              ^^^ help: if this is intentional, prefix it with an underscore: `_age`
+
+warning: unused variable: `importance`
+   --> /home/hue/source/MEM8/m8c/src/memory/mem8.rs:325:19
+    |
+325 |         let (age, importance, decay_factor) = {
+    |                   ^^^^^^^^^^ help: if this is intentional, prefix it with an underscore: `_importance`
+
+warning: unused variable: `importance`
+   --> /home/hue/source/MEM8/m8c/src/memory/mem8.rs:455:50
+    |
+455 |     pub fn store_language(&mut self, text: &str, importance: u8) -> Result<u64> {
+    |                                                  ^^^^^^^^^^ help: if this is intentional, prefix it with an underscore: `_importance`
+
+warning: unused variable: `importance`
+   --> /home/hue/source/MEM8/m8c/src/memory/mem8.rs:463:65
+    |
+463 |     pub fn store_language_with_timestamp(&mut self, text: &str, importance: u8, timestamp: std::time::SystemTime) -> Result<u64> {
+    |                                                                 ^^^^^^^^^^ help: if this is intentional, prefix it with an underscore: `_importance`
+
+warning: unused variable: `memory_id`
+   --> /home/hue/source/MEM8/m8c/src/memory/cross_sensory.rs:212:34
+    |
+212 |     fn get_memory_emotion(&self, memory_id: u64) -> Result<EmotionalContext> {
+    |                                  ^^^^^^^^^ help: if this is intentional, prefix it with an underscore: `_memory_id`
+
+warning: unused variable: `binding`
+  --> /home/hue/source/MEM8/m8c/src/memory/cross_sensory_advanced.rs:94:21
+   |
+94 |         if let Some(binding) = &binding_result {
+   |                     ^^^^^^^ help: if this is intentional, prefix it with an underscore: `_binding`
+
+warning: unused variable: `story`
+   --> /home/hue/source/MEM8/m8c/src/memory/persona_memory.rs:114:42
+    |
+114 |     pub fn process_complex_memory(&self, story: &str) -> LayeredMemory {
+    |                                          ^^^^^ help: if this is intentional, prefix it with an underscore: `_story`
+
+warning: unused variable: `context`
+   --> /home/hue/source/MEM8/m8c/src/memory/persona_memory.rs:168:9
+    |
+168 |         context: &SocialContext,
+    |         ^^^^^^^ help: if this is intentional, prefix it with an underscore: `_context`
+
+warning: unused variable: `belief`
+   --> /home/hue/source/MEM8/m8c/src/memory/persona_memory.rs:254:17
+    |
+254 |         for (i, belief) in self.filter.core_beliefs.iter().enumerate() {
+    |                 ^^^^^^ help: if this is intentional, prefix it with an underscore: `_belief`
+
+warning: unused variable: `sensor_id`
+   --> /home/hue/source/MEM8/m8c/src/temporal/context.rs:338:29
+    |
+338 |     fn process_audio(&self, sensor_id: &str, data: &AudioData) -> Result<()> {
+    |                             ^^^^^^^^^ help: if this is intentional, prefix it with an underscore: `_sensor_id`
+
+warning: unused variable: `data`
+   --> /home/hue/source/MEM8/m8c/src/temporal/context.rs:338:46
+    |
+338 |     fn process_audio(&self, sensor_id: &str, data: &AudioData) -> Result<()> {
+    |                                              ^^^^ help: if this is intentional, prefix it with an underscore: `_data`
+
+warning: unused variable: `sensor_id`
+   --> /home/hue/source/MEM8/m8c/src/temporal/context.rs:343:30
+    |
+343 |     fn process_visual(&self, sensor_id: &str, data: &VisualData) -> Result<()> {
+    |                              ^^^^^^^^^ help: if this is intentional, prefix it with an underscore: `_sensor_id`
+
+warning: unused variable: `data`
+   --> /home/hue/source/MEM8/m8c/src/temporal/context.rs:343:47
+    |
+343 |     fn process_visual(&self, sensor_id: &str, data: &VisualData) -> Result<()> {
+    |                                               ^^^^ help: if this is intentional, prefix it with an underscore: `_data`
+
+warning: unused variable: `sensor_id`
+   --> /home/hue/source/MEM8/m8c/src/temporal/context.rs:348:29
+    |
+348 |     fn process_lidar(&self, sensor_id: &str, data: &LidarData) -> Result<()> {
+    |                             ^^^^^^^^^ help: if this is intentional, prefix it with an underscore: `_sensor_id`
+
+warning: unused variable: `data`
+   --> /home/hue/source/MEM8/m8c/src/temporal/context.rs:348:46
+    |
+348 |     fn process_lidar(&self, sensor_id: &str, data: &LidarData) -> Result<()> {
+    |                                              ^^^^ help: if this is intentional, prefix it with an underscore: `_data`
+
+warning: unused variable: `sensor_id`
+   --> /home/hue/source/MEM8/m8c/src/temporal/context.rs:353:29
+    |
+353 |     fn process_radar(&self, sensor_id: &str, data: &RadarData) -> Result<()> {
+    |                             ^^^^^^^^^ help: if this is intentional, prefix it with an underscore: `_sensor_id`
+
+warning: unused variable: `data`
+   --> /home/hue/source/MEM8/m8c/src/temporal/context.rs:353:46
+    |
+353 |     fn process_radar(&self, sensor_id: &str, data: &RadarData) -> Result<()> {
+    |                                              ^^^^ help: if this is intentional, prefix it with an underscore: `_data`
+
+warning: unused variable: `sensor_id`
+   --> /home/hue/source/MEM8/m8c/src/temporal/context.rs:358:33
+    |
+358 |     fn process_vibration(&self, sensor_id: &str, data: &VibrationData) -> Result<()> {
+    |                                 ^^^^^^^^^ help: if this is intentional, prefix it with an underscore: `_sensor_id`
+
+warning: unused variable: `data`
+   --> /home/hue/source/MEM8/m8c/src/temporal/context.rs:358:50
+    |
+358 |     fn process_vibration(&self, sensor_id: &str, data: &VibrationData) -> Result<()> {
+    |                                                  ^^^^ help: if this is intentional, prefix it with an underscore: `_data`
+
+warning: unused variable: `data`
+   --> /home/hue/source/MEM8/m8c/src/temporal/fusion.rs:340:20
+    |
+340 |     fn fuse(&self, data: &FusionInput) -> Result<FusedOutput> {
+    |                    ^^^^ help: if this is intentional, prefix it with an underscore: `_data`
+
+warning: unused variable: `data`
+   --> /home/hue/source/MEM8/m8c/src/temporal/fusion.rs:385:20
+    |
+385 |     fn fuse(&self, data: &FusionInput) -> Result<FusedOutput> {
+    |                    ^^^^ help: if this is intentional, prefix it with an underscore: `_data`
+
+warning: unused variable: `sensor_id`
+   --> /home/hue/source/MEM8/m8c/src/temporal/fusion.rs:467:30
+    |
+467 |     fn get_correlated(&self, sensor_id: &str, threshold: f32) -> Vec<String> {
+    |                              ^^^^^^^^^ help: if this is intentional, prefix it with an underscore: `_sensor_id`
+
+warning: unused variable: `threshold`
+   --> /home/hue/source/MEM8/m8c/src/temporal/fusion.rs:467:47
+    |
+467 |     fn get_correlated(&self, sensor_id: &str, threshold: f32) -> Vec<String> {
+    |                                               ^^^^^^^^^ help: if this is intentional, prefix it with an underscore: `_threshold`
+
+warning: field `universal_grid` is never read
+  --> /home/hue/source/MEM8/m8c/src/memory/cross_sensory.rs:16:5
+   |
+11 | pub struct CrossSensoryBinder {
+   |            ------------------ field in this struct
+...
+16 |     universal_grid: Arc<RwLock<Grid<BindCell>>>,
+   |     ^^^^^^^^^^^^^^
+   |
+   = note: `#[warn(dead_code)]` on by default
+
+warning: field `fusion_pipeline` is never read
+  --> /home/hue/source/MEM8/m8c/src/memory/adaptive_attention.rs:30:5
+   |
+10 | pub struct AdaptiveAttention {
+   |            ----------------- field in this struct
+...
+30 |     fusion_pipeline: Option<Arc<SensorFusionPipeline>>,
+   |     ^^^^^^^^^^^^^^^
+
+warning: fields `persona_seeds` and `personal_mem8` are never read
+  --> /home/hue/source/MEM8/m8c/src/memory/identity_protection.rs:16:5
+   |
+11 | pub struct IdentityProtection {
+   |            ------------------ fields in this struct
+...
+16 |     persona_seeds: PersonaSeeds,
+   |     ^^^^^^^^^^^^^
+...
+28 |     personal_mem8: Arc<Mem8>,
+   |     ^^^^^^^^^^^^^
+
+warning: fields `creator_identity` and `timestamp` are never read
+  --> /home/hue/source/MEM8/m8c/src/memory/identity_protection.rs:81:5
+   |
+76 | pub struct MemorySignature {
+   |            --------------- fields in this struct
+...
+81 |     creator_identity: [u8; 32],
+   |     ^^^^^^^^^^^^^^^^
+...
+84 |     timestamp: SystemTime,
+   |     ^^^^^^^^^
+   |
+   = note: `MemorySignature` has derived impls for the traits `Clone` and `Debug`, but these are intentionally ignored during dead code analysis
+
+warning: field `endpoint` is never read
+  --> /home/hue/source/MEM8/m8c/src/memory/identity_protection.rs:96:5
+   |
+94 | pub struct NexusConnection {
+   |            --------------- field in this struct
+95 |     /// Nexus endpoint (would be https://8n.is/api in production)
+96 |     endpoint: String,
+   |     ^^^^^^^^
+
+warning: field `max_context_memories` is never read
+  --> /home/hue/source/MEM8/m8c/src/memory/context_builder.rs:10:5
+   |
+8  | pub struct ContextBuilder {
+   |            -------------- field in this struct
+9  |     mem8: Arc<RwLock<Mem8>>,
+10 |     max_context_memories: usize,
+   |     ^^^^^^^^^^^^^^^^^^^^
+
+warning: field `storage_path` is never read
+  --> /home/hue/source/MEM8/m8c/src/storage/vector_store.rs:92:5
+   |
+89 | pub struct VectorStore {
+   |            ----------- field in this struct
+...
+92 |     storage_path: PathBuf,
+   |     ^^^^^^^^^^^^
+
+warning: field `storage_path` is never read
+  --> /home/hue/source/MEM8/m8c/src/storage/vector_store_v2.rs:13:5
+   |
+10 | pub struct VectorStoreV2 {
+   |            ------------- field in this struct
+...
+13 |     storage_path: PathBuf,
+   |     ^^^^^^^^^^^^
+
+warning: field `spatial_map` is never read
+  --> /home/hue/source/MEM8/m8c/src/temporal/context.rs:11:5
+   |
+8  | pub struct ContextAwareness {
+   |            ---------------- field in this struct
+...
+11 |     spatial_map: Arc<RwLock<SpatialMap>>,
+   |     ^^^^^^^^^^^
+
+warning: fields `confidence_map` and `last_seen` are never read
+  --> /home/hue/source/MEM8/m8c/src/temporal/context.rs:22:5
+   |
+18 | pub struct PeopleTracker {
+   |            ------------- fields in this struct
+...
+22 |     confidence_map: FxHashMap<String, f32>,
+   |     ^^^^^^^^^^^^^^
+23 |     /// Last update time for each person
+24 |     last_seen: FxHashMap<String, std::time::SystemTime>,
+   |     ^^^^^^^^^
+   |
+   = note: `PeopleTracker` has a derived impl for the trait `Clone`, but this is intentionally ignored during dead code analysis
+
+warning: fields `spatial_audio_map` and `room_acoustics` are never read
+  --> /home/hue/source/MEM8/m8c/src/temporal/context.rs:84:5
+   |
+81 | pub struct AudioSourceTracker {
+   |            ------------------ fields in this struct
+...
+84 |     spatial_audio_map: SpatialAudioMap,
+   |     ^^^^^^^^^^^^^^^^^
+85 |     /// Acoustic environment characteristics
+86 |     room_acoustics: RoomAcoustics,
+   |     ^^^^^^^^^^^^^^
+
+warning: fields `mic_positions`, `tdoa_matrix`, and `beam_weights` are never read
+   --> /home/hue/source/MEM8/m8c/src/temporal/context.rs:111:5
+    |
+109 | pub struct SpatialAudioMap {
+    |            --------------- fields in this struct
+110 |     /// Microphone array configuration
+111 |     mic_positions: Vec<Position3D>,
+    |     ^^^^^^^^^^^^^
+112 |     /// Time-difference-of-arrival matrix
+113 |     tdoa_matrix: Vec<Vec<f32>>,
+    |     ^^^^^^^^^^^
+114 |     /// Beamforming weights for each direction
+115 |     beam_weights: FxHashMap<(u16, u16), Vec<f32>>, // (azimuth, elevation) -> weights
+    |     ^^^^^^^^^^^^
+
+warning: fields `occupancy`, `moving_objects`, `static_features`, and `confidence_map` are never read
+   --> /home/hue/source/MEM8/m8c/src/temporal/context.rs:136:5
+    |
+134 | pub struct SpatialMap {
+    |            ---------- fields in this struct
+135 |     /// 3D occupancy grid
+136 |     occupancy: OccupancyGrid3D,
+    |     ^^^^^^^^^
+137 |     /// Dynamic object tracking
+138 |     moving_objects: Vec<TrackedObject>,
+    |     ^^^^^^^^^^^^^^
+139 |     /// Static furniture/room layout
+140 |     static_features: Vec<StaticFeature>,
+    |     ^^^^^^^^^^^^^^^
+141 |     /// Sensor fusion confidence
+142 |     confidence_map: ConfidenceGrid3D,
+    |     ^^^^^^^^^^^^^^
+
+warning: fields `resolution`, `grid`, and `origin` are never read
+   --> /home/hue/source/MEM8/m8c/src/temporal/context.rs:146:5
+    |
+145 | pub struct OccupancyGrid3D {
+    |            --------------- fields in this struct
+146 |     resolution: f32, // meters per voxel
+    |     ^^^^^^^^^^
+147 |     grid: Vec<Vec<Vec<f32>>>, // 3D grid of occupancy probabilities
+    |     ^^^^
+148 |     origin: Position3D,
+    |     ^^^^^^
+
+warning: field `grid` is never read
+   --> /home/hue/source/MEM8/m8c/src/temporal/context.rs:193:5
+    |
+192 | pub struct ConfidenceGrid3D {
+    |            ---------------- field in this struct
+193 |     grid: Vec<Vec<Vec<SensorConfidence>>>,
+    |     ^^^^
+
+warning: fields `activity_history`, `normal_patterns`, and `anomaly_threshold` are never read
+   --> /home/hue/source/MEM8/m8c/src/temporal/context.rs:208:5
+    |
+206 | pub struct ActivityMonitor {
+    |            --------------- fields in this struct
+207 |     current_activities: Vec<DetectedActivity>,
+208 |     activity_history: Vec<(std::time::SystemTime, DetectedActivity)>,
+    |     ^^^^^^^^^^^^^^^^
+209 |     normal_patterns: Vec<ActivityPattern>,
+    |     ^^^^^^^^^^^^^^^
+210 |     anomaly_threshold: f32,
+    |     ^^^^^^^^^^^^^^^^^
+
+warning: field `rules` is never read
+   --> /home/hue/source/MEM8/m8c/src/temporal/context.rs:243:5
+    |
+240 | pub struct AttentionModel {
+    |            -------------- field in this struct
+...
+243 |     rules: Vec<AttentionRule>,
+    |     ^^^^^
+
+warning: fields `importance_weights` and `anomaly_thresholds` are never read
+  --> /home/hue/source/MEM8/m8c/src/temporal/fusion.rs:61:5
+   |
+57 | pub struct FusionEngine {
+   |            ------------ fields in this struct
+...
+61 |     importance_weights: ImportanceWeights,
+   |     ^^^^^^^^^^^^^^^^^^
+62 |     /// Anomaly detection thresholds
+63 |     anomaly_thresholds: AnomalyThresholds,
+   |     ^^^^^^^^^^^^^^^^^^
+
+warning: fields `matrix` and `sensor_indices` are never read
+   --> /home/hue/source/MEM8/m8c/src/temporal/fusion.rs:169:5
+    |
+168 | pub struct CorrelationMatrix {
+    |            ----------------- fields in this struct
+169 |     matrix: Vec<Vec<f32>>,
+    |     ^^^^^^
+170 |     sensor_indices: FxHashMap<String, usize>,
+    |     ^^^^^^^^^^^^^^
+
+warning: `mem8` (lib) generated 55 warnings (run `cargo fix --lib -p mem8` to apply 6 suggestions)
+   Compiling m8q v0.1.0 (/home/hue/source/i1/8q-is)
+warning: unused import: `Responder`
+ --> src/api.rs:5:36
+  |
+5 | use actix_web::{web, HttpResponse, Responder, HttpRequest, Error};
+  |                                    ^^^^^^^^^
+  |
+  = note: `#[warn(unused_imports)]` on by default
+
+warning: unused import: `actix_web::http::header::ContentType`
+ --> src/api.rs:7:5
+  |
+7 | use actix_web::http::header::ContentType;
+  |     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+warning: unused import: `std::fs::File`
+  --> src/api.rs:10:5
+   |
+10 | use std::fs::File;
+   |     ^^^^^^^^^^^^^
+
+warning: unused import: `std::io::Write`
+  --> src/api.rs:11:5
+   |
+11 | use std::io::Write;
+   |     ^^^^^^^^^^^^^^
+
+warning: unused import: `actix_web::rt::task`
+  --> src/api.rs:14:5
+   |
+14 | use actix_web::rt::task;
+   |     ^^^^^^^^^^^^^^^^^^^
+
+warning: unused import: `actix_web::web::Data`
+  --> src/api.rs:15:5
+   |
+15 | use actix_web::web::Data;
+   |     ^^^^^^^^^^^^^^^^^^^^
+
+warning: unused import: `actix_web::HttpResponseBuilder`
+  --> src/api.rs:16:5
+   |
+16 | use actix_web::HttpResponseBuilder;
+   |     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+warning: unused import: `actix_web::HttpResponse as Resp`
+  --> src/api.rs:17:5
+   |
+17 | use actix_web::HttpResponse as Resp;
+   |     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+warning: unused import: `actix_web::web::Payload`
+  --> src/api.rs:20:5
+   |
+20 | use actix_web::web::Payload;
+   |     ^^^^^^^^^^^^^^^^^^^^^^^
+
+warning: unused import: `actix_web::HttpRequest as Req`
+  --> src/api.rs:21:5
+   |
+21 | use actix_web::HttpRequest as Req;
+   |     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+warning: unused imports: `Engine as _` and `engine::general_purpose`
+  --> src/api.rs:23:14
+   |
+23 | use base64::{Engine as _, engine::general_purpose};
+   |              ^^^^^^^^^^^  ^^^^^^^^^^^^^^^^^^^^^^^
+
+warning: unused variable: `mem8_lock`
+   --> src/api.rs:378:9
+    |
+378 |     let mem8_lock = mem8.lock().unwrap();
+    |         ^^^^^^^^^ help: if this is intentional, prefix it with an underscore: `_mem8_lock`
+    |
+    = note: `#[warn(unused_variables)]` on by default
+
+warning: unused import: `futures_util::StreamExt`
+ --> src/api.rs:9:5
+  |
+9 | use futures_util::StreamExt as _;
+  |     ^^^^^^^^^^^^^^^^^^^^^^^
+
+warning: function `emotional_context_to_bytes` is never used
+  --> src/m8.rs:15:4
+   |
+15 | fn emotional_context_to_bytes(ec: &EmotionalContext) -> [u8; 3] {
+   |    ^^^^^^^^^^^^^^^^^^^^^^^^^^
+   |
+   = note: `#[warn(dead_code)]` on by default
+
+warning: associated items `from_compound` and `to_bytes` are never used
+   --> src/m8.rs:123:12
+    |
+56  | impl M8Container {
+    | ---------------- associated items in this implementation
+...
+123 |     pub fn from_compound(
+    |            ^^^^^^^^^^^^^
+...
+162 |     pub fn to_bytes(&self) -> Result<Vec<u8>> {
+    |            ^^^^^^^^
+
+warning: field `mem8` is never read
+   --> src/m8.rs:248:5
+    |
+247 | pub struct M8Nexus {
+    |            ------- field in this struct
+248 |     mem8: Arc<Mutex<Mem8>>,
+    |     ^^^^
+
+warning: fields `records` and `default_policy` are never read
+  --> src/consent.rs:35:5
+   |
+34 | pub struct ConsentManager {
+   |            -------------- fields in this struct
+35 |     records: Arc<Mutex<HashMap<(String, ConsentType), ConsentRecord>>>,
+   |     ^^^^^^^
+36 |     default_policy: ConsentPolicy,
+   |     ^^^^^^^^^^^^^^
+
+warning: field `0` is never read
+  --> src/consent.rs:44:17
+   |
+44 |     TimeLimited(Duration), // Allow for a specific duration
+   |     ----------- ^^^^^^^^
+   |     |
+   |     field in this variant
+   |
+   = note: `ConsentPolicy` has derived impls for the traits `Clone` and `Debug`, but these are intentionally ignored during dead code analysis
+help: consider changing the field to be of unit type to suppress this warning while preserving the field numbering, or remove the field
+   |
+44 -     TimeLimited(Duration), // Allow for a specific duration
+44 +     TimeLimited(()), // Allow for a specific duration
+   |
+
+warning: variants `AlwaysAsk` and `ImplicitAllow` are never constructed
+  --> src/consent.rs:42:5
+   |
+41 | pub enum ConsentPolicy {
+   |          ------------- variants in this enum
+42 |     AlwaysAsk,        // Always require explicit consent
+   |     ^^^^^^^^^
+43 |     ImplicitAllow,    // Allow by default (for development)
+   |     ^^^^^^^^^^^^^
+   |
+   = note: `ConsentPolicy` has derived impls for the traits `Clone` and `Debug`, but these are intentionally ignored during dead code analysis
+
+warning: methods `check_consent`, `grant_consent`, `revoke_consent`, `get_user_consents`, and `cleanup_expired` are never used
+   --> src/consent.rs:56:12
+    |
+47  | impl ConsentManager {
+    | ------------------- methods in this implementation
+...
+56  |     pub fn check_consent(&self, user_id: &str, operation: ConsentType) -> bool {
+    |            ^^^^^^^^^^^^^
+...
+93  |     pub fn grant_consent(
+    |            ^^^^^^^^^^^^^
+...
+114 |     pub fn revoke_consent(&self, user_id: &str, operation: ConsentType) {
+    |            ^^^^^^^^^^^^^^
+...
+124 |     pub fn get_user_consents(&self, user_id: &str) -> Vec<(ConsentType, ConsentRecord)> {
+    |            ^^^^^^^^^^^^^^^^^
+...
+148 |     pub fn cleanup_expired(&self) {
+    |            ^^^^^^^^^^^^^^^
+
+warning: struct `ConsentRequest` is never constructed
+   --> src/consent.rs:169:12
+    |
+169 | pub struct ConsentRequest {
+    |            ^^^^^^^^^^^^^^
+
+warning: associated items `new`, `with_purpose`, `with_data_description`, `with_retention`, `with_sharing`, and `to_prompt` are never used
+   --> src/consent.rs:179:12
+    |
+178 | impl ConsentRequest {
+    | ------------------- associated items in this implementation
+179 |     pub fn new(user_id: String, operation: ConsentType) -> Self {
+    |            ^^^
+...
+190 |     pub fn with_purpose(mut self, purpose: String) -> Self {
+    |            ^^^^^^^^^^^^
+...
+195 |     pub fn with_data_description(mut self, description: String) -> Self {
+    |            ^^^^^^^^^^^^^^^^^^^^^
+...
+200 |     pub fn with_retention(mut self, period: Duration) -> Self {
+    |            ^^^^^^^^^^^^^^
+...
+205 |     pub fn with_sharing(mut self, scope: Vec<String>) -> Self {
+    |            ^^^^^^^^^^^^
+...
+211 |     pub fn to_prompt(&self) -> String {
+    |            ^^^^^^^^^
+
+warning: field `excitement_threshold` is never read
+  --> src/auctioneer.rs:71:5
+   |
+67 | pub struct Auctioneer {
+   |            ---------- field in this struct
+...
+71 |     excitement_threshold: f32,
+   |     ^^^^^^^^^^^^^^^^^^^^
+
+warning: methods `get_recent_events`, `set_style`, and `announce_battle_event` are never used
+   --> src/auctioneer.rs:308:12
+    |
+84  | impl Auctioneer {
+    | --------------- methods in this implementation
+...
+308 |     pub fn get_recent_events(&self, count: usize) -> Vec<AuctionEvent> {
+    |            ^^^^^^^^^^^^^^^^^
+...
+318 |     pub fn set_style(&mut self, style: CommentaryStyle) {
+    |            ^^^^^^^^^
+...
+323 |     pub async fn announce_battle_event(&self, battle_type: crate::auctioneer_battles::BattleEventType) {
+    |                  ^^^^^^^^^^^^^^^^^^^^^
+
+warning: function `generate_battle_commentary` is never used
+  --> src/auctioneer_battles.rs:51:8
+   |
+51 | pub fn generate_battle_commentary(event: &BattleEventType) -> (String, u8) {
+   |        ^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+warning: function `get_crowd_reaction` is never used
+   --> src/auctioneer_battles.rs:161:8
+    |
+161 | pub fn get_crowd_reaction(excitement_level: u8) -> &'static str {
+    |        ^^^^^^^^^^^^^^^^^^
+
+warning: `m8q` (bin "m8q") generated 26 warnings (run `cargo fix --bin "m8q"` to apply 11 suggestions)
+    Finished `dev` profile [unoptimized + debuginfo] target(s) in 2.78s
+     Running `/home/hue/source/i1/8q-is/target/debug/m8q`
+
+🚀 8q.is Nexus Server Launching!
+🌊 Wave-based consciousness system initializing...
+📦 M8C containers ready for quantum compression!
+✨ Elvis has entered the building. Trish is moderating. Hue, you rock!
+
+[2m2025-07-20T20:36:58.114082Z[0m [31mERROR[0m Specified path is not a directory: "./static"    
+[2m2025-07-20T20:36:58.115941Z[0m [31mERROR[0m Specified path is not a directory: "./static"    
+[2m2025-07-20T20:36:58.117884Z[0m [31mERROR[0m Specified path is not a directory: "./static"    
+[2m2025-07-20T20:36:58.120334Z[0m [31mERROR[0m Specified path is not a directory: "./static"    
+[2m2025-07-20T20:36:58.123326Z[0m [31mERROR[0m Specified path is not a directory: "./static"    
+[2m2025-07-20T20:36:58.127196Z[0m [31mERROR[0m Specified path is not a directory: "./static"    
+[2m2025-07-20T20:36:58.131013Z[0m [31mERROR[0m Specified path is not a directory: "./static"    
+[2m2025-07-20T20:36:58.132731Z[0m [31mERROR[0m Specified path is not a directory: "./static"    
+[2m2025-07-20T20:36:58.134181Z[0m [31mERROR[0m Specified path is not a directory: "./static"    
+[2m2025-07-20T20:36:58.136382Z[0m [31mERROR[0m Specified path is not a directory: "./static"    
+[2m2025-07-20T20:36:58.139282Z[0m [31mERROR[0m Specified path is not a directory: "./static"    
+[2m2025-07-20T20:36:58.141494Z[0m [31mERROR[0m Specified path is not a directory: "./static"    
+[2m2025-07-20T20:36:58.161705Z[0m [31mERROR[0m Specified path is not a directory: "./static"    
+[2m2025-07-20T20:36:58.168018Z[0m [31mERROR[0m Specified path is not a directory: "./static"    
+[2m2025-07-20T20:36:58.174420Z[0m [31mERROR[0m Specified path is not a directory: "./static"    
+[2m2025-07-20T20:36:58.181713Z[0m [31mERROR[0m Specified path is not a directory: "./static"    
+[2m2025-07-20T20:36:58.188946Z[0m [31mERROR[0m Specified path is not a directory: "./static"    
+[2m2025-07-20T20:36:58.197107Z[0m [31mERROR[0m Specified path is not a directory: "./static"    
+[2m2025-07-20T20:36:58.203576Z[0m [31mERROR[0m Specified path is not a directory: "./static"    
+[2m2025-07-20T20:36:58.210776Z[0m [31mERROR[0m Specified path is not a directory: "./static"    
+[2m2025-07-20T20:36:58.218987Z[0m [31mERROR[0m Specified path is not a directory: "./static"    
+[2m2025-07-20T20:36:58.225757Z[0m [31mERROR[0m Specified path is not a directory: "./static"    
+[2m2025-07-20T20:36:58.230868Z[0m [31mERROR[0m Specified path is not a directory: "./static"    
+[2m2025-07-20T20:36:58.234059Z[0m [31mERROR[0m Specified path is not a directory: "./static"    
+[2m2025-07-20T20:36:58.239777Z[0m [31mERROR[0m Specified path is not a directory: "./static"    
+[2m2025-07-20T20:36:58.246507Z[0m [31mERROR[0m Specified path is not a directory: "./static"    
+[2m2025-07-20T20:36:58.254047Z[0m [31mERROR[0m Specified path is not a directory: "./static"    
+[2m2025-07-20T20:36:58.262946Z[0m [31mERROR[0m Specified path is not a directory: "./static"    
+[2m2025-07-20T20:36:58.290568Z[0m [31mERROR[0m Specified path is not a directory: "./static"    
+[2m2025-07-20T20:36:58.299627Z[0m [31mERROR[0m Specified path is not a directory: "./static"    
+[2m2025-07-20T20:36:58.306528Z[0m [31mERROR[0m Specified path is not a directory: "./static"    
+[2m2025-07-20T20:36:58.310419Z[0m [31mERROR[0m Specified path is not a directory: "./static"    

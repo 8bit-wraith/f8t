@@ -17,3 +17,7 @@ pytest-cov>=4.1.0      # Coverage reporting
 # Optional enhancements
 colorama>=0.4.6        # Cross-platform colored output
 click>=8.1.0           # Advanced CLI features (future)
+
+# 8q-is integration dependencies
+websocket-client>=1.6.0  # WebSocket for auctioneer live feed
+aiofiles>=23.0.0         # Async file operations
