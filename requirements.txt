@@ -1,0 +1,19 @@
+# Sage AI Assistant Requirements
+# Python 3.8+
+
+# Core dependencies
+pyyaml>=6.0.1          # YAML configuration parsing
+httpx>=0.25.0          # Modern HTTP client for API calls
+rich>=13.7.0           # Beautiful terminal output
+python-dotenv>=1.0.0   # Environment variable management
+
+# Development tools (optional but recommended)
+ruff>=0.1.0            # Fast Python linter
+black>=23.0.0          # Code formatter
+mypy>=1.7.0            # Type checking
+pytest>=7.4.0          # Testing framework
+pytest-cov>=4.1.0      # Coverage reporting
+
+# Optional enhancements
+colorama>=0.4.6        # Cross-platform colored output
+click>=8.1.0           # Advanced CLI features (future)
